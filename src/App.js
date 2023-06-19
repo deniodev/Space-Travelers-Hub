@@ -1,9 +1,22 @@
+import React from 'react';
 import './App.css';
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import Header from './components/Header/Header';
 
 function App() {
   return (
-    <div>
-      <h1>Space-Travelers-Hub</h1>
+    <div className="App">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
