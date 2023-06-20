@@ -13,8 +13,8 @@ const Header = () => (
     </div>
     <ul className="nav-link">
       <NavLink to="/">Rockets</NavLink>
-      <NavLink to="mission">Missions</NavLink>
-      <NavLink to="profile">My profile</NavLink>
+      <NavLink to="/missions">Missions</NavLink>
+      <NavLink to="/profile">My profile</NavLink>
     </ul>
   </nav>
 );
