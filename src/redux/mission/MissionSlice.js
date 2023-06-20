@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 const missionUrl = 'https://api.spacexdata.com/v3/missions';
 
 const getMissions = createAsyncThunk(
-  'missions/fecth-missions',
+  'missions/fetch-missions',
   async (thunkAPI) => {
     try {
       const response = await fetch(missionUrl);
