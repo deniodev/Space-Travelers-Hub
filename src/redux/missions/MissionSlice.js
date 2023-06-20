@@ -23,7 +23,7 @@ const MissionSlice = createSlice({
   name: 'mission',
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(GetMissions.fulfilled, (state, action) => {
+    builder.addCase(getMissions.fulfilled, (state, action) => {
       const set = action.payload.map((mission) => ({
         ...mission,
         member: false,
