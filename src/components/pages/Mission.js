@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions } from '../../redux/mission/MissionSlice';
+import { getMissions, joinMission, leaveMission } from '../../redux/mission/MissionSlice';
 
 const Mission = () => {
   const dispatch = useDispatch();
@@ -24,18 +24,42 @@ const Mission = () => {
         {
           missions.map((mission) => (
             <tr className="mission-id" key={mission.mission_id}>
-              <td className="mission-name">{mission.mission_name}</td>
+              <td className="mission-name"><span>{mission.mission_name}</span></td>
               <td className="mission-description">{mission.description}</td>
-              <td>
-                <span className="mission-status">
-                  Not a member
-                </span>
-              </td>
-              <td>
-                <button type="button" className="join-mission">
-                  Join-Mission
-                </button>
-              </td>
+              {!mission.member && (
+                <>
+                  <td>
+                    <span className="mission-status">NOT A MEMBER</span>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      onClick={() => dispatch(joinMission(mission.mission_id))}
+                      className="join-mission"
+                    >
+                      Join Mission
+                    </button>
+                  </td>
+                </>
+              )}
+              {mission.member && (
+                <>
+                  <td>
+                    <span className="active-member">
+                      Active Member
+                    </span>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      onClick={() => dispatch(leaveMission(mission.mission_id))}
+                      className="leave-mission"
+                    >
+                      Leave Mission
+                    </button>
+                  </td>
+                </>
+              )}
             </tr>
           ))
         }
