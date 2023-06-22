@@ -135,3 +135,30 @@ td {
   border: 1px solid red;
   padding: 8px;
 }
+
+.profile-content {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.progress-rocket {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.item {
+  list-style: none;
+  background: whitesmoke;
+  font-weight: normal;
+  border: 1px solid lightgrey;
+}
+
+.item h4 {
+  font-weight: normal;
+  padding-left: 2rem;
+}
