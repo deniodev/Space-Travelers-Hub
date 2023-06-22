@@ -115,6 +115,7 @@ td {
 .mission-status,
 .join-mission {
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .active-member {
@@ -134,6 +135,7 @@ td {
   background-color: transparent;
   border: 1px solid red;
   padding: 8px;
+  cursor: pointer;
 }
 
 .profile-content {
@@ -160,4 +162,21 @@ td {
 .item h4 {
   font-weight: normal;
   padding-left: 2rem;
+}
+
+.m-joined {
+  padding: 0.5em 2em;
+}
+
+.m-joined-profile {
+  border: 1px solid black;
+  border-bottom: none;
+  width: 45%;
+  padding: 0;
+}
+
+.m-joined-profile li {
+  border-bottom: 1px solid black;
+  padding: 1em;
+  margin: 0;
 }
