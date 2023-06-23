@@ -1,0 +1,40 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: whitesmoke;
+  padding: 0.5rem 2rem;
+}
+
+.logo-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-content p {
+  font-size: 1.5rem;
+}
+
+.logo {
+  width: 100px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+.nav-link a {
+  text-decoration: none;
+}
+
+a.active {
+  text-decoration: underline;
+}
