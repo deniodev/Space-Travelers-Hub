@@ -15,7 +15,6 @@ const Rockets = () => {
 
   return (
     <div>
-      <h1>Rockets</h1>
       {rockets.map((rocket) => (
         <RocketList rocket={rocket} key={rocket.id} />
       ))}
