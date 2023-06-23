@@ -45,9 +45,21 @@ export const rocketsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchRockets.pending, (state) => ({ ...state, status: 'loading' }))
-      .addCase(fetchRockets.fulfilled, (state, action) => ({
-        ...state, status: 'succeeded', rockets: action.payload, isFetched: true,
-      }))
+      .addCase(fetchRockets.fulfilled, (state, action) => {
+        const results = action.payload;
+        const rockets = results.map((result) => ({
+          id: result.id,
+          rocket_name: result.rocket_name,
+          description: result.description,
+          flickr_images: result.flickr_images,
+        }));
+        return {
+          ...state,
+          status: 'succeeded',
+          rockets,
+          isFetched: true,
+        };
+      })
       .addCase(fetchRockets.rejected, (state, action) => ({ ...state, status: 'failed', error: action.error.message }));
   },
 });
