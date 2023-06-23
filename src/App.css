@@ -143,40 +143,29 @@ td {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: space-between;
   margin-top: 15px;
+  column-gap: 20px;
 }
 
+.m-joined-profile,
 .progress-rocket {
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 
+.m-joined-profile li,
 .item {
+  display: flex;
   list-style: none;
+  height: 90px;
+  align-items: center;
   background: whitesmoke;
   font-weight: normal;
   border: 1px solid lightgrey;
+  padding-left: 2rem;
 }
 
 .item h4 {
   font-weight: normal;
-  padding-left: 2rem;
-}
-
-.m-joined {
-  padding: 0.5em 2em;
-}
-
-.m-joined-profile {
-  border: 1px solid black;
-  border-bottom: none;
-  width: 45%;
-  padding: 0;
-}
-
-.m-joined-profile li {
-  border-bottom: 1px solid black;
-  padding: 1em;
-  margin: 0;
 }
