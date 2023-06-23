@@ -45,16 +45,19 @@ const MissionSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(getMissions.fulfilled, (state, action) => {
-      const set = action.payload.map((mission) => ({
-        ...mission,
-        member: false,
-      }));
-      return {
-        ...state,
-        missions: set,
-      };
-    });
+    builder
+      .addCase(getMissions.fulfilled, (state, action) => {
+        const set = action.payload.map((mission) => ({
+          mission_id: mission.mission_id,
+          mission_name: mission.mission_name,
+          description: mission.description,
+          member: false,
+        }));
+        return {
+          ...state,
+          missions: set,
+        };
+      });
   },
 });
 
