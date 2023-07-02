@@ -29,7 +29,7 @@ After you're finished please remove all the comments and instructions!
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <br/>
 
-  <h3><b>Space-Traveler's Hub</b></h3>
+  <h3><b>Space Traveler's Hub</b></h3>
 
 </div>
 
