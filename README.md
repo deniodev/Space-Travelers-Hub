@@ -33,7 +33,8 @@ After you're finished please remove all the comments and instructions!
 
 </div>
 
-![rockets](https://github.com/deniodev/Space-Travelers-Hub/assets/92977776/5e4764db-a304-4a44-be42-0c1cc974d24d)
+![Space](https://github.com/deniodev/Space-Travelers-Hub/assets/92977776/e72c3da4-24c0-41a0-9c79-2ae7a2123737)
+
 
 <!-- TABLE OF CONTENTS -->
 
